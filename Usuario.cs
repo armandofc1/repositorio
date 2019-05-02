@@ -24,5 +24,8 @@ namespace RepositoryPattern
 
         [Column("EMAIL")]
         public string Email { get; set; }
+
+        [Column("DT_INCLUSAO")]
+        public DateTime DataInclusao { get; set; }
     }
 }

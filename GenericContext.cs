@@ -32,7 +32,7 @@ namespace RepositoryPattern
                 Database = "Repositorio"
             };
             optionsBuilder.UseSqlServer(conexao.ConnectionString);*/
-            optionsBuilder.UseSqlServer(@"server=DSK-0203\SQLEXPRESS;database=Repositorio;trusted_connection=true;");
+            optionsBuilder.UseSqlServer(@"server=DSK-0203;database=Repositorio;trusted_connection=true;");
             optionsBuilder.UseLazyLoadingProxies();
         }
     }

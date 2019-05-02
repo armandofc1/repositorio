@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace RepositoryPattern
 {
-    public class Repositorio<T> : Irepositorio<T> where T : Entidade
+    public class Repositorio<T> : IRepositorio<T> where T : Entidade
     {
         public IList<T> PesquisarTodos()
         {
@@ -27,7 +27,7 @@ namespace RepositoryPattern
             }
         }
 
-        public void Inserir(T entity)
+        public virtual void Inserir(T entity)
         {
             using (var context = new GenericContext<T>())
             {

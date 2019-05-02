@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace RepositoryPattern
-{    public interface Irepositorio<T> where T : class
+{    public interface IRepositorio<T> where T : class
     {
         IList<T> PesquisarTodos();
         IList<T> PesquisarPorId(long id);

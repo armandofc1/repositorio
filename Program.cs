@@ -13,11 +13,17 @@ namespace RepositoryPattern
                 Nome = "Teste",
                 Sobrenome = "Teste"
             };
-
-            Irepositorio<Usuario> repositorioUsuarios = new Repositorio<Usuario>();
+/* 
+            IRepositorio<Usuario> repositorioUsuarios = new Repositorio<Usuario>();
             repositorioUsuarios.Inserir(usuario);
 
             var resultado = repositorioUsuarios.PesquisarTodos();
+*/
+            UsuarioContext repositorioUsuarios = new UsuarioContext();
+            repositorioUsuarios.Inserir(usuario);
+
+            var resultado = repositorioUsuarios.PesquisarTodos();
+
         }
     }
 }
